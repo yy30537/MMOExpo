@@ -6380,7 +6380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Find Room
+  m_text: 'Menu Option 1
 
 '
   m_isRightToLeft: 0
@@ -10013,8 +10013,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 902768873}
   m_HandleRect: {fileID: 902768872}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11003,7 +11003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Create Room
+  m_text: Menu Option 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13809,9 +13809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quit Game
-
-'
+  m_text: Menu Option 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14895,7 +14893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.000022888184, y: 108.23874}
+  m_AnchoredPosition: {x: -0.000022888184, y: 108.23876}
   m_SizeDelta: {x: -17.542496, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1321991180
@@ -15586,6 +15584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuName: loading
+  open: 0
 --- !u!1 &1384225681
 GameObject:
   m_ObjectHideFlags: 0
@@ -15979,6 +15978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuName: title
+  open: 0
 --- !u!1 &1406812276
 GameObject:
   m_ObjectHideFlags: 0
