@@ -15,6 +15,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     // a callback called by Photon when we successfully connect to the master server
     public override void OnConnectedToMaster()
     {
+        Debug.Log("Connected to " + PhotonNetwork.CloudRegion);
         Debug.Log("Connected to MMO Expo");
         PhotonNetwork.JoinLobby();
     }
