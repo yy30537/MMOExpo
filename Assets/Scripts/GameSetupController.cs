@@ -10,7 +10,6 @@ public class GameSetupController : MonoBehaviour
     {
         Debug.Log("in Start(), GameSetupController");
         //CreatePlayer();
-        //SceneManager.LoadScene("LauncherScene",LoadSceneMode.Single);
     }
 
     private void CreatePlayer()

@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1973576002}
+      - m_Target: {fileID: 1973576004}
         m_MethodName: launchAvatarSelectionPage
         m_Mode: 1
         m_Arguments:
@@ -251,6 +251,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231725999}
   m_CullTransparentMesh: 0
+--- !u!1 &258326084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258326085}
+  - component: {fileID: 258326086}
+  m_Layer: 0
+  m_Name: RegisterPageController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258326085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258326084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 319.64343, y: 246.67523, z: -4688.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &258326086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258326084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a9cfe0c71908f4587638926f7c7f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectAvatarButton: {fileID: 0}
 --- !u!1 &367513393
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +324,7 @@ Transform:
   m_Children:
   - {fileID: 1317531336}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645058491
 GameObject:
@@ -872,7 +916,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1123118876
 MonoBehaviour:
@@ -1069,7 +1113,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1389627486}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 258326086}
+        m_MethodName: launchRegisterPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1389627486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,6 +1482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973576003}
   - component: {fileID: 1973576002}
+  - component: {fileID: 1973576004}
   m_Layer: 0
   m_Name: SelectAvatarController
   m_TagString: Untagged
@@ -1460,6 +1516,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1973576004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973576001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f8b9bd392f7544da9b6b9012b1d735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectAvatarButton: {fileID: 231725999}
 --- !u!1 &2015559608
 GameObject:
   m_ObjectHideFlags: 0

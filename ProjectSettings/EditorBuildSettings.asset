@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/AvatarSelectionScene.unity
     guid: 89279aa7a0933ef408074b46b8dee2bc
   - enabled: 1
+    path: Assets/Scenes/RegisterScene.unity
+    guid: c96e8fc5adf090045af747cb22f64a44
+  - enabled: 1
     path: Assets/Scenes/ExpoMainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

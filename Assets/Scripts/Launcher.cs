@@ -21,8 +21,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("in Start(), Launcher");
-        Debug.Log("Connecting to MMO Expo ...");
+        Debug.Log("=====Start() Launcher=====");
+        //Debug.Log("Connecting to MMO Expo ...");
         PhotonNetwork.ConnectUsingSettings();   // 加： connect to Photon Online Server using ID
         
 
@@ -35,8 +35,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     // joins lobby after connected to master
     public override void OnConnectedToMaster()
     {
-        Debug.Log("Connected to " + PhotonNetwork.CloudRegion);
-        Debug.Log("Connected to MMO Expo");
+        //Debug.Log("Connected to " + PhotonNetwork.CloudRegion);
+        //Debug.Log("Connected to MMO Expo");
         PhotonNetwork.JoinLobby();
     }
 
@@ -44,8 +44,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        //MenuManager.instance.OpenMenu("title");
-        Debug.Log("Joined Lobby");
+        //Debug.Log("Joined Lobby");
         SceneManager.LoadScene("LauncherScene", LoadSceneMode.Single);
     }
 

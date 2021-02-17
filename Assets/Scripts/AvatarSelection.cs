@@ -15,7 +15,7 @@ public class AvatarSelection : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("in Start(), AvatarSelection");
+        Debug.Log("=====Start() AvatarSelection=====");
         NextBT.SetActive(true);
         PreviousBT.SetActive(true);
         ConfirmBT.SetActive(true);
@@ -48,6 +48,7 @@ public class AvatarSelection : MonoBehaviour
         Debug.Log("StartGame");
         // Stores and accesses player preferences between game sessions
         //PlayerPrefs.SetInt("selectedAvatar", selectedAvatar);
-        SceneManager.LoadScene("ExpoMainScene", LoadSceneMode.Single);
+        //SceneManager.LoadScene("ExpoMainScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("LauncherScene", LoadSceneMode.Single);
     }
 }
