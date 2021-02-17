@@ -9,11 +9,6 @@ public class Camera_Controller : MonoBehaviour
     private Vector3 target_position;
     public float move_speed;
 
-    void Start()
-    {
-        
-    }
-
 
     void Update()
     {

@@ -6,6 +6,8 @@ public class QuickStartRoomController : MonoBehaviourPunCallbacks
     [SerializeField]
     private int multiplayerSceneIndex = 1;
 
+
+
     public override void OnEnable()
     {
         PhotonNetwork.AddCallbackTarget(this);
@@ -16,6 +18,7 @@ public class QuickStartRoomController : MonoBehaviourPunCallbacks
         PhotonNetwork.RemoveCallbackTarget(this);
     }
 
+    // ¼Ó£º informs your script when we effectively join a room
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined Room");

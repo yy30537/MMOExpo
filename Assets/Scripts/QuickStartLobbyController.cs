@@ -10,14 +10,21 @@ public class QuickStartLobbyController : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     private GameObject quickStartButton;
+
     [SerializeField]
     private GameObject quickCancelButton;
+
     [SerializeField]
     private int RoomSize;
 
     public override void OnConnectedToMaster()
     {
+
+        // this makes sure we can use PhotonNetwork.LoadLevel() on the master 
+        // client and all clients in the same room sync their level automatically
         PhotonNetwork.AutomaticallySyncScene = true;
+
+        // enable the quick start button after connected
         quickStartButton.SetActive(true);
     }
 
@@ -25,10 +32,13 @@ public class QuickStartLobbyController : MonoBehaviourPunCallbacks
     {
         quickStartButton.SetActive(false);
         quickCancelButton.SetActive(true);
-        PhotonNetwork.JoinRandomRoom();
+        PhotonNetwork.JoinRandomRoom();     // after connected, attempt joining a Random Room. 
+                                            
         Debug.Log("Quick start");
     }
 
+
+    // ¼Ó£º If joining a Random Room fails, we'll get notified in OnJoinRandomFailed() and we'll create one.
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
         Debug.Log("Failed to join a room");
@@ -56,6 +66,8 @@ public class QuickStartLobbyController : MonoBehaviourPunCallbacks
         quickStartButton.SetActive(true);
         PhotonNetwork.LeaveRoom();
     }
+
+    // to be implemented: public override void OnDisconnected
 
 
 }

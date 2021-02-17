@@ -11,10 +11,6 @@ public class Chat_Manager : MonoBehaviour
     public InputField chatBox;
     public int maxMessages = 25;
 
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

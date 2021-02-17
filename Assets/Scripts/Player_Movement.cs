@@ -12,6 +12,7 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("in Start(), Player_Movement");
         anim = GetComponent<Animator>();
     }
 
