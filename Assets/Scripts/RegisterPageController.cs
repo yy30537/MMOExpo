@@ -7,8 +7,8 @@ public class RegisterPageController : MonoBehaviour
 {
     //[SerializeField]
 
-    [SerializeField]
-    private GameObject SelectAvatarButton;
+    //[SerializeField]
+    //private GameObject SelectAvatarButton;
 
     //public GameObject[] avatarPrefabs;
     //public Transform spawnPoint;

@@ -12,8 +12,14 @@ public class RegisterPage : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void ConfirmRegister()
+    public void GoBackToLauncherScene()
     {
         SceneManager.LoadScene("LauncherScene", LoadSceneMode.Single);
     }
+
+    public void GoToMainScene()
+    {
+        SceneManager.LoadScene("ExpoMainScene", LoadSceneMode.Single);
+    }
+
 }

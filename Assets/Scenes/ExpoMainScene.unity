@@ -1200,13 +1200,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 112098659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b4e75c231eec684187227c97e1c85ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e83346221559314d9cf27a2b3984eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   messageList: []
   chatPanel: {fileID: 1321991178}
-  textObject: {fileID: 4460605806079355004, guid: c8c5a33c1a9962444880b114ea1354b8,
-    type: 3}
+  textObject: {fileID: 819107742}
   chatBox: {fileID: 1899391353}
   maxMessages: 25
 --- !u!4 &112098661
@@ -6555,11 +6554,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639d162feaeacfa4f81c8556e4101dff, type: 3}
+  m_Script: {fileID: 11500000, guid: 012c6356bb852d64083fecff4362afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target_followed: {fileID: 614674336}
-  move_speed: 5
+  move_speed: 3
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -7602,10 +7601,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 614674336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132815258ac73004a9702964760128a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cf5a9d7705592443be27b78e89f838d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_speed: 5
+  move_speed: 4
 --- !u!95 &614674338
 Animator:
   serializedVersion: 3
@@ -9749,7 +9748,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 902768873}
   m_HandleRect: {fileID: 902768872}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10278,6 +10277,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &819107742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4460605806079355004, guid: c8c5a33c1a9962444880b114ea1354b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8501756783162882276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &837463821
 GameObject:
   m_ObjectHideFlags: 0
