@@ -75,7 +75,7 @@ public class database : MonoBehaviour
                     WWWForm form = new WWWForm();
                     form.AddField("user", user);
                     form.AddField("password", password);
-                    WWW w = new WWW("http://f6-preview.awardspace.com/unitytutorial.com/login.php", form);
+                    WWW w = new WWW("https://osummoexpo.mygamesonline.org/login.php", form);
                     StartCoroutine(login(w));
                 }
             }
