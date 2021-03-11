@@ -9,7 +9,7 @@ public class GameSetupController : MonoBehaviour
     void Start()
     {
         Debug.Log("in Start(), GameSetupController");
-        //CreatePlayer();
+        CreatePlayer();
     }
 
     private void CreatePlayer()
@@ -21,6 +21,8 @@ public class GameSetupController : MonoBehaviour
         Debug.Log("Player Created");
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "AvaTest"), Vector3.zero, Quaternion.identity);
         Debug.Log("Avatar created (capsule)");
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "myPlayer"), Vector3.zero, Quaternion.identity);
+        Debug.Log("Avatar created (Movement)");
     }
 
     // Update is called once per frame
