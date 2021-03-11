@@ -16,11 +16,6 @@ public class AvatarSelectionController : MonoBehaviour
     void Start()
     {
         Debug.Log("=====Start() CreateAvatarController=====");
-        //int selectedAvatar = PlayerPrefs.GetInt("selectedAvatar");
-        //GameObject prefab = avatarPrefabs[selectedAvatar];
-        //GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
-
-
     }
 
     public void launchAvatarSelectionPage()

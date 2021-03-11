@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class RegisterPage : MonoBehaviour
 {
+    public GameObject[] Avatars;
+    public int selectedAvatar = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,9 @@ public class RegisterPage : MonoBehaviour
 
     public void GoToMainScene()
     {
+        
         SceneManager.LoadScene("ExpoMainScene", LoadSceneMode.Single);
+        
     }
 
 }
