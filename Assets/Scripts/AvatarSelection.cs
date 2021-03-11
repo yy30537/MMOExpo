@@ -43,12 +43,12 @@ public class AvatarSelection : MonoBehaviour
         Avatars[selectedAvatar].SetActive(true);
     }
 
-    public void StartGame()
+    public void ConfirmAvatar()
     {
-        Debug.Log("StartGame");
+        Debug.Log("ConfirmAvatar");
         // Stores and accesses player preferences between game sessions
         //PlayerPrefs.SetInt("selectedAvatar", selectedAvatar);
         //SceneManager.LoadScene("ExpoMainScene", LoadSceneMode.Single);
-        SceneManager.LoadScene("LauncherScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("RegisterScene", LoadSceneMode.Single);
     }
 }
