@@ -60,6 +60,8 @@ public class database : MonoBehaviour
 
             GUILayout.EndHorizontal();
         }
+
+        /*
         else
         {
             GUILayout.Label("User:");
@@ -90,6 +92,7 @@ public class database : MonoBehaviour
 
             GUILayout.EndHorizontal();
         }
+        */
     }
 
     /*
