@@ -13,6 +13,7 @@ public class Camera_Follow : MonoBehaviour
 
     void LateUpdate()
     {
+        Debug.Log("Calling follow");
         if (player == null)
         {
             player = GameObject.Find("myPlayer(Clone)");

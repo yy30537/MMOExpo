@@ -9,8 +9,7 @@ public class Camera_Controller : MonoBehaviour
     private Vector3 target_position;
     public float move_speed;
 
-   
-    void Update()
+    void Start()
     {
         
         target_position = new Vector3(target_followed.transform.position.x, target_followed.transform.position.y, transform.position.z);
