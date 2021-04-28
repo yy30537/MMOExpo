@@ -11,7 +11,22 @@ public class Camera_Controller : MonoBehaviour
 
     void Start()
     {
-        
+        Debug.Log("Calling controller start");
+        target_position = transform.position;
+    }
+    void LateUpdate()
+    {
+        //Debug.Log("Calling controller");
+        if (target_followed == null)
+        {
+            target_followed = GameObject.Find("myPlayer(Clone)");
+        }
+        /*
+        else
+        {
+            transform.position = target_followed.transform.position + target_position;
+        }
+        */
         target_position = new Vector3(target_followed.transform.position.x, target_followed.transform.position.y, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, target_position, move_speed * Time.deltaTime);
     }
