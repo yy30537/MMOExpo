@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
+
 
 public class database : MonoBehaviour 
 {
@@ -43,10 +45,13 @@ public class database : MonoBehaviour
                         form.AddField("user", user);
                         form.AddField("name", name);
                         form.AddField("password", password);
-                        WWW w = new WWW("https://osummoexpo.mygamesonline.org/register.php", form);
+                        //UnityWebRequest w = new WWW("https://osummoexpo.mygamesonline.org/register.php", form);
 
-                    
-                        StartCoroutine(registerFunc(w));
+                        UnityWebRequest w  = UnityWebRequest.Post("https://osummoexpo.mygamesonline.org/register.php", form);
+
+                        // exmaple http://osummoexpo.mygamesonline.org/register.php?user=abcd&name=yang1&password=123451
+
+                        //StartCoroutine(registerFunc(w));
                     }
                     else
                         message += "Your Password does not match \n";
@@ -55,6 +60,8 @@ public class database : MonoBehaviour
 
             GUILayout.EndHorizontal();
         }
+
+        /*
         else
         {
             GUILayout.Label("User:");
@@ -76,7 +83,7 @@ public class database : MonoBehaviour
                     form.AddField("user", user);
                     form.AddField("password", password);
                     WWW w = new WWW("https://osummoexpo.mygamesonline.org/login.php", form);
-                    StartCoroutine(login(w));
+                    //StartCoroutine(loginFunc(w));
                 }
             }
 
@@ -85,9 +92,11 @@ public class database : MonoBehaviour
 
             GUILayout.EndHorizontal();
         }
+        */
     }
 
-    IEnumerator login(WWW w)
+    /*
+    IEnumerator loginFunc(UnityWebRequest w)
     {
         yield return w;
         if (w.error == null)
@@ -101,11 +110,11 @@ public class database : MonoBehaviour
         }
         else
         {
-            message += "In database.cs Login(WWW w)  - ERROR: " + w.error + "\n";
+            message += "In database.cs LoginFunc(WWW w)  - ERROR: " + w.error + "\n";
         }
     }
 
-    IEnumerator registerFunc(WWW w)
+    IEnumerator registerFunc(UnityWebRequest w)
     {
         yield return w;
         if (w.error == null)
@@ -117,4 +126,5 @@ public class database : MonoBehaviour
             message += "In database.cs registerFunc(WWW w)  - ERROR: " + w.error + "\n";
         }
     }
+    */
 }

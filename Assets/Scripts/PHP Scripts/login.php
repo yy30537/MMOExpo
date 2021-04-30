@@ -22,6 +22,9 @@ if (mysqli_connect_errno()) {
 $check_if_exist = mysql_query($conn, "SELECT * FROM MMOEXPOAuth WHERE `user`='".$user."'");
 $numrows = mysql_num_rows($check_if_exist);
 
+
+
+
 if ($numrows == 0)
 {
 	die ("Username does not exist \n");
