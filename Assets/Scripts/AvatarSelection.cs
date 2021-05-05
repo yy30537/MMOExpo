@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AvatarSelection : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class AvatarSelection : MonoBehaviour
     public GameObject PreviousBT;
     public GameObject ConfirmBT;
 
+    public Button QuitButton;
+
 
     void Start()
     {
@@ -19,6 +22,9 @@ public class AvatarSelection : MonoBehaviour
         NextBT.SetActive(true);
         PreviousBT.SetActive(true);
         ConfirmBT.SetActive(true);
+
+        Button Quitbtn = QuitButton.GetComponent<Button>();
+        Quitbtn.onClick.AddListener(QuitGame);
 
     }
 
@@ -49,5 +55,10 @@ public class AvatarSelection : MonoBehaviour
         // Stores and accesses player preferences between game sessions
         PlayerPrefs.SetInt("selectedAvatar", selectedAvatar);
         SceneManager.LoadScene("RegisterScene", LoadSceneMode.Single);
+    }
+
+    private void QuitGame()
+    {
+        Application.Quit();
     }
 }
