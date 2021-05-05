@@ -45,7 +45,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         //Debug.Log("Joined Lobby");
-        SceneManager.LoadScene("LauncherScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Register_Login", LoadSceneMode.Single);
     }
 
 
