@@ -15,6 +15,7 @@ public class PlayfabManager : MonoBehaviour
     public Text messageText;
     public InputField emailInput;
     public InputField passwordInput;
+    public InputField nicknameInput;
 
     public Button LoginButton;
     public Button RegisterButton;
@@ -22,6 +23,8 @@ public class PlayfabManager : MonoBehaviour
 
     public Button ContinueButton;
     public Button QuitButton;
+
+    bool newAccount;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,7 @@ public class PlayfabManager : MonoBehaviour
         ContinueButton.gameObject.SetActive(false);
         QuitButton.gameObject.SetActive(true);
 
+        nicknameInput.gameObject.SetActive(false);
 
         // set login, register, reset buttons listeners
         Button Loginbtn = LoginButton.GetComponent<Button>();
@@ -53,6 +57,7 @@ public class PlayfabManager : MonoBehaviour
         Button Quitbtn = QuitButton.GetComponent<Button>();
         Quitbtn.onClick.AddListener(QuitGame);
 
+        newAccount = false;
 
     }
 
@@ -113,6 +118,10 @@ public class PlayfabManager : MonoBehaviour
 
         ContinueButton.gameObject.SetActive(true);
 
+        newAccount = true;
+        nicknameInput.gameObject.SetActive(true);
+
+
     }
 
     public void ResetPasswordButtonFunc()
@@ -139,7 +148,32 @@ public class PlayfabManager : MonoBehaviour
 
     private void continueToNextScene()
     {
+        
+        if (newAccount == true)
+        {
+            var request = new UpdateUserTitleDisplayNameRequest
+            {
+                DisplayName = nicknameInput.text
+            };
+            PlayFabClientAPI.UpdateUserTitleDisplayName(request, OnNameUpdateSuccess, OnError);
+        }
+
+        /*
+         * 
+         * Load "RegisterScene" with 1 "Select Avatar" (btn to select avatar scene) and 
+         *                           2 "Enter World" (btn to ExpoMainScene)
+         * 
+         * 
+         * then do photon things, join lobby connect server and stuff
+         * 
+         */
+
         SceneManager.LoadScene("RegisterScene", LoadSceneMode.Single);
+    }
+
+    private void OnNameUpdateSuccess(UpdateUserTitleDisplayNameResult result)
+    {
+        Debug.Log("Updated Display name");
     }
 
     private void QuitGame()
