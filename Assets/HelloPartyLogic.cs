@@ -19,8 +19,10 @@ public class HelloPartyLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        //Debug.Log("  you think you are");
+        if (Input.GetMouseButton(0))
         {
+            //Debug.Log("You're pressing the button you think you are");
             byte[] requestAsBytes = Encoding.UTF8.GetBytes("Hello (data message)");
             PlayFabMultiplayerManager.Get().SendDataMessageToAllPlayers(requestAsBytes);
         }
