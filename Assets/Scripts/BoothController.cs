@@ -18,6 +18,8 @@ public class BoothController : MonoBehaviour
     public GameObject booths4;
     public GameObject booths5;
 
+    public GameObject scroll;
+
     public bool isOpen1;
     public bool isOpen2;
     public bool isOpen3;
@@ -51,13 +53,15 @@ public class BoothController : MonoBehaviour
                         if (isOpen1 == true)
                         {
                             isOpen1 = false;
-                            panels1.transform.GetChild(0).gameObject.SetActive(false);
-                            panels1.transform.GetChild(1).gameObject.SetActive(false);
+                            scroll.transform.GetChild(0).gameObject.SetActive(false);
+                            scroll.transform.GetChild(1).gameObject.SetActive(false);
+                            scroll.transform.GetChild(2).gameObject.SetActive(false);
                         } else
                         {
                             isOpen1 = true;
-                            panels1.transform.GetChild(0).gameObject.SetActive(true);
-                            panels1.transform.GetChild(1).gameObject.SetActive(true);
+                            scroll.transform.GetChild(0).gameObject.SetActive(true);
+                            scroll.transform.GetChild(1).gameObject.SetActive(true);
+                            scroll.transform.GetChild(2).gameObject.SetActive(true);
                         }
                     } else if (gameObject.name == "Booth2")
                     {
