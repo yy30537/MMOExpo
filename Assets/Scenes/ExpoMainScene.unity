@@ -5543,28 +5543,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 985120791}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &394292371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394292370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0626213a17958f44fb460c6bd9b91f43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  booths1: {fileID: 0}
-  booths2: {fileID: 0}
-  booths3: {fileID: 0}
-  booths4: {fileID: 0}
-  booths5: {fileID: 0}
-  isOpen1: 0
-  isOpen2: 0
-  isOpen3: 0
-  isOpen4: 0
-  isOpen5: 0
 --- !u!61 &394292372
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11867,6 +11845,7 @@ MonoBehaviour:
   booths3: {fileID: 845086790}
   booths4: {fileID: 1276638096}
   booths5: {fileID: 1423822855}
+  scroll: {fileID: 598728610}
   isOpen1: 0
   isOpen2: 0
   isOpen3: 0
@@ -18811,7 +18790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1503397516
 RectTransform:
   m_ObjectHideFlags: 0
